@@ -1,0 +1,384 @@
+#container {
+  margin-top: 10vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+.startPage {
+  width: 120px !important;
+  height: 40px !important;
+  display: flex;
+  padding: 20px;
+  background-color: rgb(36, 81, 148);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  cursor: pointer;
+  flex-direction: row;
+  box-shadow: 0 0 3px rgba(36, 36, 36, 0.623);
+}
+.startPage > * {
+  flex: 1;
+}
+#container a {
+  text-decoration: none;
+}
+.toolbar-header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding-top: 0 !important;
+}
+ion-header {
+  z-index: 10000;
+}
+.toolbar-header .toolbar-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.toolbar-background {
+  background-color: white !important;
+  background: white !important;
+}
+.toolbar-header > .toolbar-content > .image > img {
+  width: 100px;
+  height: 80%;
+  cursor: pointer;
+}
+.toolbar-header > .toolbar-content > .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+}
+.toolbar-header > .toolbar-content > .buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.basket-logo {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 40px;
+  top: 40%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.basketNumber {
+  padding: 4px;
+  background: rgb(0, 174, 255);
+  height: 20px;
+  border-radius: 20px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.ioncardcontent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.ioncardcontent > * {
+  width: 100%;
+}
+.sizeselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sizeselector ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 4px;
+  padding-inline-start: 0;
+  box-shadow: 0 1px 4px rgb(119, 119, 119);
+  border-radius: 10px;
+  height: 30px;
+}
+
+.sizeselector ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  text-align: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(221, 221, 221, 0.151);
+  cursor: pointer;
+  font-size: 90%;
+}
+.sizeselector ul > li:hover {
+  background-color: rgba(255, 245, 104, 0.637);
+}
+.sizeselector ul > li:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.sizeselector ul > li:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.sizeselector ul > li:nth-child(n + 3):nth-child(-n + 5) {
+}
+
+.sizeselectoractive {
+  background-color: rgb(0, 174, 255) !important;
+}
+.addToBasket {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-item {
+  width: 23% !important;
+}
+.addToBasket > .addbutton {
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 40px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: rgb(255, 243, 78);
+  box-shadow: 0 3px 4px rgba(119, 119, 119, 0.568);
+  transition: all 0.1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+.addToBasket > h1:active {
+  pointer-events: none;
+  transform: scale(0.8);
+}
+.addToBasket > .addbutton:hover {
+  transform: scale(0.95);
+}
+.addToBasket > .addbutton > img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+}
+.addToBasket > .addbutton > h1 {
+  margin-left: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  text-shadow: 0px 2px 4px rgba(58, 58, 58, 0.363);
+}
+.card-img {
+  margin-top: 10px;
+}
+
+.products {
+  width: 90%;
+  height: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+ion-card-header {
+  text-align: center;
+}
+ion-card-subtitle {
+  font-size: 140% !important;
+}
+ion-header {
+  position: fixed;
+}
+
+.basket-open {
+  top: 78px;
+}
+.basket-closed {
+  top: -408px;
+}
+.basket-products {
+  width: 25%;
+  position: fixed;
+  right: 30px;
+  flex-direction: column;
+  z-index: 1000;
+  height: 50vh;
+  overflow: auto;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(37, 37, 37, 0.459);
+  border-radius: 0 10px 10px 10px;
+  transition: all 0.3s ease-in-out;
+}
+.basket-products::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 0 10px 10px 0;
+}
+.basket-products::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+  border-radius: 0 10px 10px 0;
+}
+.basket-products::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 174, 255);
+  border-radius: 0 10px 10px 0;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+.basket-ioncardcontent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.basket-item {
+  width: 92%;
+  margin-left: 16px;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+.basket-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.basket-header > * {
+  font-size: 16px !important;
+}
+.basket-image {
+  margin-left: 10px;
+  width: 50%;
+  height: 50%;
+}
+.basket-image img {
+  width: 100%;
+  height: 100%;
+}
+.basketItemInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.removeItem {
+  width: 25px;
+  color: white;
+  border-radius: 50%;
+  height: 25px;
+  background-color: rgb(0, 174, 255);
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  z-index: 2222222222222222;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  cursor: pointer;
+  pointer-events: all;
+  padding: 4px;
+}
+.amount {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-inline: 10px;
+}
+.amount > * {
+  font-size: 200%;
+  margin: 5px;
+  padding: 10px;
+  background-color: rgb(255, 243, 78);
+  color: rgb(0, 174, 255);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.37);
+  cursor: pointer;
+}
+
+.billandamount {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.billandamount > * {
+  margin-inline: 5px;
+}
+.endbill {
+  font-size: 22px;
+}
+.amountofitems {
+  font-size: 14px;
+}
+
+.nonclickable {
+  pointer-events: none !important;
+  background-color: rgba(255, 255, 180, 0.5) !important;
+}

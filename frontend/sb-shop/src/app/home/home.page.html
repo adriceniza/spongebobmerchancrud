@@ -1,0 +1,145 @@
+<ion-content color="light" [fullscreen]="true">
+  <ion-header [translucent]="true" mode="md">
+    <ion-toolbar color="light" class="toolbar-header">
+      <div class="toolbar-content">
+        <div class="image">
+          <img src="../../assets/images/spongebob-logo.png" alt="logo" />
+        </div>
+      </div>
+      <div class="startPage" (click)="startPage()">
+        <p>Add 8 products</p>
+      </div>
+      <div (click)="openBasket()" class="basket-logo">
+        <img src="../../assets/images/basket.png" alt="basket-logo" />
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="basket-view">
+    <div class="basket-products basket-closed">
+      <ion-card *ngFor="let b of spongebobbasket" class="basket-item">
+        <div (click)="deleteItemFromBasket(b)" class="removeItem">x</div>
+        <div class="billandamount">
+          <div class="amountofitems">
+            Size : {{b.size}} - Units : {{b.units}}
+          </div>
+          <div class="endbill">{{b.prize}}€ per unit.</div>
+        </div>
+        <div class="basketItemInformation">
+          <div class="basket-image">
+            <img
+              class="card-img"
+              src="{{b.img}}"
+              alt="s"
+              width="300px"
+              height="300px"
+            />
+          </div>
+          <ion-card-header class="basket-header">
+            <ion-card-title>{{b.model}}</ion-card-title>
+          </ion-card-header>
+        </div>
+        <ion-card-content class="basket-ioncardcontent">
+          <div class="amount">
+            <div (click)="addUnit(b)" class="addone">+</div>
+            <div (click)="removeUnit(b)" class="removeone">-</div>
+          </div>
+          <div class="changesize">
+            <select
+              (change)="changeSize(b,$event.target.value)"
+              name="size"
+              id="size"
+            >
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+  <div id="container">
+    <div class="products">
+      <ion-card *ngFor="let b of spongebobclothes" class="product-item">
+        <div class="image-container">
+          <img
+            class="card-img"
+            src="{{b.img}}"
+            alt="{{b.model}}"
+            width="300px"
+            height="300px"
+          />
+        </div>
+
+        <ion-card-header>
+          <ion-card-title>{{b.model}}</ion-card-title>
+          <ion-card-subtitle>{{b.prize}} €</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content class="ioncardcontent">
+          <div class="sizeselector">
+            <ul>
+              <li
+                (click)="sizeselector(1,b.id)"
+                id="1{{b.id}}"
+                class="sizeselectoritem"
+              >
+                XS
+              </li>
+              <li
+                (click)="sizeselector(2,b.id)"
+                id="2{{b.id}}"
+                class="sizeselectoritem"
+              >
+                S
+              </li>
+              <li
+                (click)="sizeselector(3,b.id)"
+                id="3{{b.id}}"
+                class="sizeselectoritem"
+              >
+                M
+              </li>
+              <li
+                (click)="sizeselector(4,b.id)"
+                id="4{{b.id}}"
+                class="sizeselectoritem"
+              >
+                L
+              </li>
+              <li
+                (click)="sizeselector(5,b.id)"
+                id="5{{b.id}}"
+                class="sizeselectoritem"
+              >
+                XL
+              </li>
+              <li
+                (click)="sizeselector(6,b.id)"
+                id="6{{b.id}}"
+                class="sizeselectoritem"
+              >
+                XXL
+              </li>
+            </ul>
+          </div>
+          <div class="addToBasket">
+            <div
+              (click)="addItemToBasket(b) "
+              id="size-selector{{b.id}}"
+              class="addbutton nonclickable"
+            >
+              <img src="../../assets/images/basket.png" alt="basket-logo" />
+              <h1>Add to the basket</h1>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
