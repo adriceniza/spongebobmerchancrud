@@ -31,8 +31,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 100px;
-  top: 20px;
+  left: 1%;
+  top: 20%;
   cursor: pointer;
   flex-direction: row;
   box-shadow: 0 0 3px rgba(36, 36, 36, 0.623);
@@ -175,9 +175,7 @@ ion-header {
   justify-content: center;
   align-items: center;
 }
-.product-item {
-  width: 23% !important;
-}
+
 .addToBasket > .addbutton {
   border-radius: 20px;
   cursor: pointer;
@@ -218,8 +216,9 @@ ion-header {
 .products {
   width: 90%;
   height: 100%;
-  display: inline-flex;
-  flex-wrap: wrap;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
 }
 ion-card-header {
   text-align: center;
@@ -381,4 +380,21 @@ ion-header {
 .nonclickable {
   pointer-events: none !important;
   background-color: rgba(255, 255, 180, 0.5) !important;
+}
+
+@media only screen and (max-width: 850px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr)) !important;
+  }
+  .basket-products {
+    width: 50% !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important;
+  }
+  .basket-products {
+    width: 84% !important;
+  }
 }
