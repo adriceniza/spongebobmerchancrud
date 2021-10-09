@@ -49,6 +49,8 @@
 ## Getting Started
 
 <br/>
+
+<!-- PREREQUISITES -->
 ### Prerequisites
 
 The database its on backend/database/spongebobdb.sql
