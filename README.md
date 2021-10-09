@@ -51,16 +51,11 @@
 <br/>
 ### Prerequisites
 
-Open workbench and add the following database.
-
-Use spongebobdb , it is on backend/database/spongebobdb.sql
+The database its on backend/database/spongebobdb.sql
 
 Open your IDE for Spring and run spring boot app.
 
 To start ionic , open the terminal and write ionic serve.
-
-You have to click on the "Add 8 products" button on the left top of the page to add 8 products and
-start using the page.
 
 I hope you like it.
 
