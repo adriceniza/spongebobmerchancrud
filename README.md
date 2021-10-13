@@ -67,18 +67,30 @@ I hope you like it.
 
 I build one table to save all the products we'll sell.
 This have :
+<br/>
 ID
+<br/>
 MODEL
+<br/>
 PRIZE
+<br/>
 IMG
+<br/>
 And i build one more table to save all the product we'll add to the basket.
 This have :
+<br/>
 ID
+<br/>
 MODEL
+<br/>
 PRIZE
+<br/>
 SIZE
+<br/>
 IMG
+<br/>
 UNITS
+<br/>
 
 In the frontend we can't add a product to the basket without having chosen a size before.
 
